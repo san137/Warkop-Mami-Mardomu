@@ -1133,3 +1133,366 @@
 
       /* Rating star */
       .about-stat .number .star { color: var(--gold); }
+
+      /* ===== ULASAN PELANGGAN ===== */
+      .ulasan {
+        padding: 6rem 6% 5rem;
+        background: var(--base);
+      }
+
+      .ulasan-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin: 3rem 0 2.5rem;
+      }
+
+      .ulasan-card {
+        background: #fff;
+        border: 1.5px solid var(--sand);
+        border-radius: 1.2rem;
+        padding: 1.8rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ulasan-card::before {
+        content: '"';
+        font-family: 'Playfair Display', serif;
+        font-size: 6rem;
+        color: var(--sand);
+        position: absolute;
+        top: -0.5rem;
+        right: 1rem;
+        line-height: 1;
+        pointer-events: none;
+      }
+
+      .ulasan-card:hover {
+        box-shadow: 0 8px 30px rgba(110, 80, 52, 0.15);
+        transform: translateY(-4px);
+      }
+
+      .ulasan-stars {
+        color: var(--gold);
+        font-size: 1.05rem;
+        letter-spacing: 2px;
+      }
+
+      .ulasan-text {
+        font-size: 0.92rem;
+        line-height: 1.7;
+        color: #5a4030;
+        flex-grow: 1;
+        font-style: italic;
+      }
+
+      .ulasan-author {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--sand);
+      }
+
+      .ulasan-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--brown), var(--gold));
+        color: #fff;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .ulasan-name {
+        display: block;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--brown-dark);
+      }
+
+      .ulasan-date {
+        display: block;
+        font-size: 0.78rem;
+        color: #999;
+      }
+
+      .ulasan-cta {
+        text-align: center;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .ulasan-cta p {
+        color: var(--brown);
+        font-size: 1rem;
+      }
+
+      /* ===== PEMBAYARAN ===== */
+      .pembayaran {
+        padding: 6rem 6% 5rem;
+        background: linear-gradient(180deg, #f7f3e6 0%, var(--base) 100%);
+      }
+
+      .pembayaran-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.8rem;
+        margin: 3rem 0 0;
+      }
+
+      .qr-card-single {
+        background: #fff;
+        border: 1.5px solid var(--sand);
+        border-radius: 1.8rem;
+        padding: 2.5rem 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.4rem;
+        text-align: center;
+        width: 100%;
+        max-width: 380px;
+        box-shadow: 0 8px 40px rgba(110, 80, 52, 0.1);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+      }
+
+      .qr-card-single:hover {
+        box-shadow: 0 16px 50px rgba(110, 80, 52, 0.18);
+        transform: translateY(-4px);
+      }
+
+      .qr-card-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      .qr-card-label {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--brown-dark);
+      }
+
+      .qr-apps-supported {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .qr-apps-supported span {
+        background: var(--base);
+        color: var(--brown);
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.75rem;
+        border-radius: 2rem;
+        border: 1px solid var(--sand);
+      }
+
+      .qr-img-area {
+        width: 220px;
+        height: 220px;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        border: 2.5px solid var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fdf8f0;
+      }
+
+      .qr-img-area img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .qr-img-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+
+      .qr-placeholder-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--brown);
+      }
+
+      .qr-placeholder-hint {
+        font-size: 0.7rem;
+        color: #bbb;
+      }
+
+      .qr-placeholder-hint code {
+        background: #f0ebe0;
+        padding: 0.1rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.68rem;
+      }
+
+      .qr-card-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .qr-detail-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--brown-dark);
+      }
+
+      .qr-detail-row svg {
+        color: var(--gold);
+        flex-shrink: 0;
+      }
+
+      .qr-detail-number {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: var(--brown-dark);
+      }
+
+      .qr-detail-name {
+        font-size: 0.85rem;
+        color: #999;
+      }
+
+      .pembayaran-tunai {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        background: linear-gradient(135deg, var(--brown-dark), var(--brown));
+        color: #fff;
+        border-radius: 1.2rem;
+        padding: 1.3rem 2rem;
+        width: 100%;
+        max-width: 380px;
+      }
+
+      .tunai-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(255,255,255,0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .tunai-title {
+        display: block;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .tunai-desc {
+        display: block;
+        font-size: 0.85rem;
+        opacity: 0.85;
+      }
+
+      .pembayaran-note {
+        text-align: center;
+        color: var(--brown);
+        font-size: 0.88rem;
+        margin-top: 1.5rem;
+        font-style: italic;
+      }
+
+      /* ===== RESPONSIVE ULASAN & PEMBAYARAN ===== */
+      @media (max-width: 900px) {
+        .ulasan-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .ulasan-grid {
+          grid-template-columns: 1fr;
+        }
+        .pembayaran-tunai {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      /* ===== GISCUS ULASAN ===== */
+      .giscus-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: linear-gradient(135deg, #fff9f0, #fdf3e3);
+        border: 1.5px solid var(--gold);
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+        margin: 2rem auto 0;
+        max-width: 640px;
+        font-size: 0.92rem;
+        color: var(--brown-dark);
+        line-height: 1.6;
+      }
+
+      .giscus-info-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--brown-dark);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #fff;
+      }
+
+      .giscus-wrap {
+        margin: 2.5rem auto 0;
+        max-width: 860px;
+        background: #fff;
+        border-radius: 1.5rem;
+        border: 1.5px solid var(--sand);
+        padding: 2rem 2.5rem;
+        min-height: 200px;
+      }
+
+      .giscus-fallback {
+        text-align: center;
+        color: #aaa;
+        padding: 2rem;
+      }
+
+      @media (max-width: 600px) {
+        .giscus-wrap {
+          padding: 1.2rem 1rem;
+        }
+        .giscus-info {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
